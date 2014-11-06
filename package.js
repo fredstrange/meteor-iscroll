@@ -7,21 +7,22 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
-  api.addFiles('fredstrange:iscroll.js');
-});
-
-Package.onTest(function(api) {
-  api.use('');
   api.addFiles(
-  	[
-  	'iscroll/build/iscroll.js', 
-  	'iscroll/build/iscroll-lite.js', 
-  	'iscroll/build/iscroll-infinite.js', 
-  	'iscroll/build/iscroll-probe.js', 
-  	'iscroll/build/iscroll-zoom.js', 
-  	],
+      [
+        'iscroll/iscroll.js',
+        'iscroll/iscroll-lite.js',
+        'iscroll/iscroll-infinite.js',
+        'iscroll/iscroll-probe.js',
+        'iscroll/iscroll-zoom.js'
+      ],
 
-  	['client']);
+      ['client']);
 
-  api.export('IScroll', 'client');
+  api.export([
+    'IScroll',
+    'IScrollLite',
+    'IScrollInfinate',
+    'IScrollProbe',
+    'IScrollZoom'
+    ], 'client');
 });
